@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         choice.setAlpha(0f);
         choice.animate().alpha(1f).setDuration(500).rotation(900);
         int current_block = Integer.parseInt(choice.getTag().toString());
-        if( block_status[current_block] == 2 ){
+        if( block_status[current_block] == 2 && !winner ){
             block_status[current_block] = active_player;
             if (active_player == 0) {
                 choice.setImageResource(R.drawable.naught);
